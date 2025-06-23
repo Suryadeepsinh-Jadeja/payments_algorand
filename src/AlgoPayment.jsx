@@ -8,7 +8,7 @@ const algodServer = 'https://testnet-api.algonode.cloud';
 const algodPort = '';
 const algodClient = new algosdk.Algodv2(algodToken, algodServer, algodPort);
 
-const AlgoPayment = () => {
+const AlgoPayment = ({ onBack }) => {
   const peraWallet = useMemo(() => new PeraWalletConnect({ chainId: "4160" }), []);
   const [accountAddress, setAccountAddress] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -110,6 +110,9 @@ const AlgoPayment = () => {
             </>
           )}
         </>
+      )}
+      {onBack && (
+        <button style={{ marginTop: 24 }} onClick={onBack}>Back</button>
       )}
     </div>
   );
