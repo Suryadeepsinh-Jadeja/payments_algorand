@@ -1,3 +1,10 @@
+/* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayPortal</title>
+    <style>
 * {
   margin: 0;
   padding: 0;
@@ -185,7 +192,6 @@ button:active {
   100% { box-shadow: 0 0 0 0 rgba(67, 206, 162, 0); }
 }
 
-/* ========== Main Layout ========== */
 .tablet-container {
   background: #fff;
   border-radius: 32px;
@@ -402,7 +408,7 @@ button:active {
   box-shadow: 0 5px 15px rgba(0,0,0,0.15);
 }
 
-/* ===================== Media Queries ===================== */
+
 @media (max-width: 1200px) {
   .tablet-content {
     gap: 40px;
@@ -554,3 +560,55 @@ button:active {
     font-size: 1rem;
   }
 }
+    </style>
+</head>
+<body>
+    <div class="browser-bg"></div>
+    
+    <div class="browser-frame">
+        <div class="browser-content">
+            <div id="root">
+                <div class="tablet-container">
+                    <div class="topbar">
+                        <div class="topbar-logo">
+                            💰 PayPortal
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <a href="#" class="topbar-home-link">Home</a>
+                            <div class="topbar-nav">
+                                <a href="#">About</a>
+                                <a href="#">Blog</a>
+                            </div>
+                            <button class="topbar-btn">CONTACT US</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tablet-content">
+                        <div class="left-card">
+                            <h1>Your expert in the field of payments</h1>
+                            <p>Choose your preferred payment method. We support both traditional and blockchain payments for your convenience.</p>
+                            <button class="cta-btn">DISCOVER ADVANTAGES →</button>
+                        </div>
+                        
+                        <div class="right-cards">
+                            <h2 style="text-align: center; margin-bottom: 10px; color: #222; font-size: 1.8rem;">Select Payment Method</h2>
+                            
+                            <div class="payment-card">
+                                <div class="card-title">🏦 BANK TRANSFER / UPI</div>
+                                <div class="card-desc">Fast and secure traditional banking methods with instant UPI transfers.</div>
+                                <button class="card-btn">Choose Banking</button>
+                            </div>
+                            
+                            <div class="payment-card crypto">
+                                <div class="card-title">🪙 CRYPTO (ALGORAND WALLET)</div>
+                                <div class="card-desc">Modern blockchain payments using Algorand's fast and eco-friendly network.</div>
+                                <button class="card-btn">Choose Crypto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> */
