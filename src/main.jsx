@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import PaymentOptions from "./PaymentOptions";
 import BankPayment from "./BankPayment";
 import AlgoPayment from "./AlgoPayment";
+import PaymentOptions from "./PaymentOptions";
+import BrowserFrame from "./BrowserFrame";
 import "./index.css";
 
 const TopBar = () => (
@@ -16,32 +17,38 @@ const TopBar = () => (
       <a href="#">About</a>
       <a href="#">Blog</a>
     </nav>
-    <button className="topbar-btn">DOWNLOAD APP</button>
+    <button className="topbar-btn">Contact us</button>
+  </div>
+);
+
+const PaymentIntro = () => (
+  <div className="left-card">
+    <h1>Your expert in the field of payments</h1>
+    <p>Choose your preferred payment method. We support both traditional and blockchain payments for your convenience.</p>
+    <button className="cta-btn">Discover advantages <span>→</span></button>
   </div>
 );
 
 const App = () => {
   const [screen, setScreen] = useState("options");
 
-  let accentCard = null;
-  if (screen === "bank") accentCard = <BankPayment onBack={() => setScreen("options")} />;
-  else if (screen === "crypto") accentCard = <AlgoPayment onBack={() => setScreen("options")} />;
-  else accentCard = <PaymentOptions onSelect={setScreen} />;
+  let rightContent;
+  if (screen === "bank") rightContent = <BankPayment onBack={() => setScreen("options")} />;
+  else if (screen === "crypto") rightContent = <AlgoPayment onBack={() => setScreen("options")} />;
+  else rightContent = <PaymentOptions onSelect={setScreen} />;
 
   return (
-    <div className="tablet-container">
-      <TopBar />
-      <div className="tablet-content">
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: 420 }}>
-          <h1 style={{fontSize: '2.6rem', lineHeight: 1.13, marginBottom: 24}}>Just 2 simple steps away<br />from making your payment</h1>
-          <p style={{fontSize: '1.18rem', color: '#2a3a2b', maxWidth: 380}}>Choose your preferred payment method. We support both traditional and blockchain payments for your convenience.</p>
-        </div>
-        <div className="accent-card accent-card-centered">
-          <div className="step">01</div>
-          {accentCard}
+    <BrowserFrame>
+      <div className="tablet-container">
+        <TopBar />
+        <div className="tablet-content">
+          <PaymentIntro />
+          <div className="right-cards">
+            {rightContent}
+          </div>
         </div>
       </div>
-    </div>
+    </BrowserFrame>
   );
 };
 
