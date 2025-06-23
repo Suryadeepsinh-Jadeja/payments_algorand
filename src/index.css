@@ -29,6 +29,11 @@ body {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .browser-bg:after {
@@ -48,7 +53,7 @@ body {
 }
 
 .browser-frame {
-  margin: 32px auto;
+  margin: 0 auto;
   max-width: 1400px;
   width: 95%;
   border-radius: 18px;

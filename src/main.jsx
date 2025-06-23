@@ -10,7 +10,7 @@ const TopBar = () => (
   <div className="topbar">
     <div className="topbar-logo">
       <span style={{fontSize: 28, marginRight: 10}}>💸</span>
-      <span style={{fontWeight: 700, fontSize: 22, marginRight: 18}}>PayPortal</span>
+      <span style={{fontWeight: 700, fontSize: 22, marginRight: 18}}>AlgoPay</span>
       <a href="#" className="topbar-home-link">Home</a>
     </div>
     <nav className="topbar-nav">

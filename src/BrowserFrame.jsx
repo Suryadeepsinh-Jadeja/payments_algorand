@@ -7,10 +7,6 @@ const BrowserFrame = ({ children }) => (
         <span className="browser-dot red"></span>
         <span className="browser-dot yellow"></span>
         <span className="browser-dot green"></span>
-        <div className="browser-address">
-          <img src="https://cryptologos.cc/logos/algorand-algo-logo.png" alt="algo" style={{height:18,verticalAlign:'middle',marginRight:8}} />
-          https://pay.bolt/algorand
-        </div>
       </div>
       <div className="browser-content">
         {children}
