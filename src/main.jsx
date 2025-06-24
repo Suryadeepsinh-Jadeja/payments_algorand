@@ -4,6 +4,7 @@ import BankPayment from "./BankPayment";
 import AlgoPayment from "./AlgoPayment";
 import PaymentOptions from "./PaymentOptions";
 import BrowserFrame from "./BrowserFrame";
+import EthereumPayment from "./EthereumPayment";
 import "./index.css";
 
 const TopBar = () => (
@@ -35,6 +36,7 @@ const App = () => {
   let rightContent;
   if (screen === "bank") rightContent = <BankPayment onBack={() => setScreen("options")} />;
   else if (screen === "crypto") rightContent = <AlgoPayment onBack={() => setScreen("options")} />;
+  else if (screen === "ethereum") rightContent = <EthereumPayment onBack={() => setScreen("options")} />;
   else rightContent = <PaymentOptions onSelect={setScreen} />;
 
   return (
