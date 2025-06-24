@@ -13,7 +13,7 @@ const PaymentOptions = ({ onSelect }) => (
       }}
       onClick={() => onSelect("bank")}
     >
-      <span role="img" aria-label="bank" style={{ fontSize: 26, marginLeft: 4 }}>🏦</span> BANK TRANSFER / UPI
+      <span role="img" aria-label="bank" style={{ fontSize: 26, marginLeft: 4 }}>🏦</span> IMPS / UPI
     </button>
     <button
       style={{
